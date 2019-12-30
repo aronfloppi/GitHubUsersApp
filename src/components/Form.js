@@ -14,16 +14,18 @@ const Form = props => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={username}
-        onChange={event => setUsername(event.target.value)}
-        placeholder="GitHub username"
-        required
-      />
-      <button type="submit">Add card</button>
-    </form>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={username}
+          onChange={event => setUsername(event.target.value)}
+          placeholder="GitHub username"
+          required
+        />
+        <button type="submit">Add card</button>
+      </form>
+    </div>
   );
 };
 
