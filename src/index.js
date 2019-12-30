@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import Form from "./components/Form";
+import CardList from "./components/CardList";
 
-import "./styles.css";
+const App = () => {
+  const [cards, setCards] = useState([]);
 
-function App() {
+  const addNewCard = cardInfo => {
+    setCards(cards.concat(cardInfo));
+  };
+
   return (
-    <div className="App">
+    <div>
       <h1>GitHub users app</h1>
+      <Form onSubmit={addNewCard} />
+      <CardList cards={cards} />
     </div>
   );
-}
+};
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
