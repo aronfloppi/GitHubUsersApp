@@ -1,2 +1,0 @@
-# GitHubUsersApp
-Created with CodeSandbox
